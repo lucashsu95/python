@@ -1,22 +1,14 @@
 #TL001 以遞升及遞減重組字串
-st1 = list(input())
-st2 = ''
-ans = []
-st1.sort()
-while st1 != []:
-    ans.append(st2)
-    st2 = ''
-    st = st1.copy()
-    for i in range(len(st)):
-        if st[i] not in st2:
-            st2 += st[i]
-            st1.remove(st[i])
-    ans.append(st2)
-    st2 = ''
-    st = st1.copy()
-    for i in range(len(st)-1,0,-1):
-        #print('i',i)
-        if st[i] not in st2:
-            st2 += st[i]
-            st1.remove(st[i])
-print(''.join(ans))
+str1 = list(sorted(input()))
+ans = ''
+while str1 != []:
+    str2 = ''
+    Lstr = str1.copy()
+    for i in Lstr:
+        if i not in str2:
+            str2+=i
+            str1.remove(i)
+    str1 = str1[::-1]
+    ans += str2
+
+print(ans)
