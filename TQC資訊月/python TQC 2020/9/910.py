@@ -1,0 +1,6 @@
+Lfile = open('data.dat','r+',encoding='utf-8')
+data = Lfile.read()
+print(data)
+data = data.split()
+print(f"Number of males: {data.count('1')}")
+print(f"Number of females: {data.count('0')}")
