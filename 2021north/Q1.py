@@ -1,25 +1,11 @@
-#連分數轉換
-import sys
-import fractions
-
-for line in sys.stdin.read().splitlines():
-    a = list(map(int,line.split(",")))
-    Lsum = a[-1]
-    Lcount = 1
-    for i in range(len(a)-2,-1,-1):
-        Lsum = 1 / Lsum + a[i]
-    Lsum = 1 / Lsum
-
-    while Lsum // 10 != Lsum / 10:
-        Lcount *= 10
-        Lsum *= 10
-    Lsum = int(Lsum)
-    Lcount = int(Lcount)
-    #print(Lsum)
-    for num,decimal in [(Lsum,Lcount)]:
-        fract = fractions.Fraction(num,decimal)
-    fract = str(fract)
-    print(fract[0])
-    print(fract[-1])
-
-        
+# 試題一(18分)：連分數轉換
+data = list(map(int,input().split(',')))[::-1]
+total = f'1/{data[0]}'
+for i in range(1,len(data)):
+    total1,total2= total.split('/')
+    total_new = f"{total2}/{int(total2)*data[i]+int(total1)}"
+    total = total_new
+    # print(total_new)
+ans1,ans2= total.split('/')    
+print(ans1)
+print(ans2)
