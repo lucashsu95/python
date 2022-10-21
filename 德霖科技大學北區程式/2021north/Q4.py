@@ -1,4 +1,4 @@
-#算式檢查
+#試題四(18 分)：算式檢查
 n = int(input())
 for i in range(n):
     Lsum = 0

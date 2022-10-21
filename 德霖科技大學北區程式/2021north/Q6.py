@@ -1,4 +1,4 @@
-#裂解之數
+#試題六(16 分)：裂解之數
 import sys
 for line in sys.stdin.read().splitlines():
     n = 0

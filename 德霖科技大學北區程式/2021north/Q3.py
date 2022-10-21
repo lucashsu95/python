@@ -1,4 +1,4 @@
-#密碼分析器
+#試題三(16 分)：密碼分析器
 import sys
 for line in sys.stdin.read().splitlines():
     Llevel = 0
