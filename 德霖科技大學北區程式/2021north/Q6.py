@@ -1,23 +1,16 @@
 #試題六(16 分)：裂解之數
-import sys
-for line in sys.stdin.read().splitlines():
-    n = 0
-    t1 = 0
-    a,b = list(map(int,line.split( )))
-    for i in range(a,b+1):
-    
-        for j in range(2,i):
+Lcount_ary = []
+Lcount = 0
+datas = list(map(int,input().split()))
+for i in range(datas[0],datas[-1]+1):
+    for j in range(2,i):
+        t1 = j
+        while t1 < i:
+            t1 *= j
 
-            #print("i:",i)
-            #print("j:",j)
-            t1 = j
-            while i > t1:
-                t1 *= j
-
-
-            #print("t1:",t1)
-            #print("_____")
-            if t1 == i:
-                n += 1
-                break
-    print(n)
+        # print(t1)
+        if t1 == i:
+            Lcount += 1
+            break   
+print(Lcount)
+#13m

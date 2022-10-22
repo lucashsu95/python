@@ -1,14 +1,13 @@
 #試題二(16 分)：總流程時間
-import sys
-Lsum = 0
-Lsum2 = []
-Lsum3 = 0
-for line in sys.stdin.read().splitlines():
-    a = list(map(int,line.split(' ')))
-    a.sort()
-for i in range(len(a)):
-    Lsum += a[i]
-    Lsum2.append(Lsum)
-for j in range(len(Lsum2)):
-    Lsum3 += Lsum2[j]
-print(Lsum3)
+datas = list(map(int,input().split()))
+datas = sorted(datas[:-1])
+print(datas)
+t1 = Lsum = 0
+Lstr = ''
+for i in range(len(datas)):
+    t1 += datas[i]
+    Lsum += t1
+    Lstr += '+' + str(t1)
+Lstr = Lstr[1:]
+print(f"{Lsum}={Lstr}")
+#6m
