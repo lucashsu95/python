@@ -1,3 +1,4 @@
+#題目 4：數列問題 (10%)
 def fun(Lchild,Lfather,t):
     if t <= n:
         t+=1
