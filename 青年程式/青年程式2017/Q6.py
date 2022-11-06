@@ -10,7 +10,6 @@ def fun(Lnum):
     return Lresult
 Lans = []
 for i in range(Lstart+1,Lend):
-    
     if i == fun(i):
         Lans.append(str(i))
 if Lans != []:

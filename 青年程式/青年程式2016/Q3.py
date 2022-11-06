@@ -1,19 +1,18 @@
-def tree(Lfather,Lans):
-    Lans.append(Lfather)
-    for i in range(len(Lary)):
-        if Lfather == Lary[i][1]:
-            tree(Lary[i][0],Lans)
-    if len(Lans) == n:
-        print(', 
-        exit()
-
-
-
-
+#題目  3：搜尋(Search)問題  (10%)
 n = int(input())
 Lfather = input()
 Lary = []
 for i in range(n-1):
     Lary.append(input().split(', '))
-#print(Lary)
-tree(Lfather,[])
+Lans = []
+def rec(Lfather):
+    global Lans
+    Lans.append(Lfather)
+    for i in range(len(Lary)):
+        if Lary[i][1] == Lfather:
+            rec(Lary[i][0])
+
+
+rec(Lfather)
+print(', '.join(Lans))
+#6m

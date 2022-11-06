@@ -5,7 +5,7 @@ for Ln in sys.stdin.read().splitlines():
     # Ln = 20
     Lcount = 0
     def fun(Lstr,Lv,Lsum): #Lstr:字串的樣子, Lv:是長音還是短音,Lsum:現在有幾秒
-        # print(Lstr)
+        print(Lstr)
         if (Lv > 0):
             Lsum += Lv
             Lstr += str(Lv)
@@ -13,7 +13,7 @@ for Ln in sys.stdin.read().splitlines():
         if (Lsum == Ln):
             global Lcount #宣告Lcount為全域變數
             Lcount = Lcount + 1
-            # print('V'+Lstr)
+            print('V'+Lstr)
         elif (Lsum < Ln):
             if (Lsum > 0):
                 Lsum+=1

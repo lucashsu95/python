@@ -1,3 +1,4 @@
+#題目  4：質數(Prime)問題  (10%)
 def prime(Lnum):
     for i in range(2,Lnum//2+1):
         if Lnum % i == 0:
