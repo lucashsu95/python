@@ -1,4 +1,4 @@
-#題目  6：孿生質數問題
+#題目 6：孿生質數問題
 def prime(Lnum):
     for i in range(2,Lnum//2+1):
         if Lnum % i == 0:
